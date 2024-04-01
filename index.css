@@ -1,0 +1,8 @@
+*{margin:unset;padding:unset;}
+body{background:#e2e2e2;}
+nav{background:#00885d;height:3rem;line-height:3rem;color:azure;padding-left:2rem;margin-bottom:1rem;}
+.container{padding:1rem;};
+#itemForm label{display:block;margin-bottom:1rem;};#itemForm input{height:2rem;text-align:center;border:2px solid #aeaeae;}
+#quantityInput,#priceInput{width:3rem;};
+#addItemButton
+

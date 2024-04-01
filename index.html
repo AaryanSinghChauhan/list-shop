@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Picking up</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" href="./pickup.jpg" />
+<link rel="stylesheet" href="./index.css" />
+<style> #addItemButton{border:unset;background:#00885d;color:azure;padding:0.5rem;}
+
+#itemsDiv{margin-top:3rem;margin-bottom:2rem;}
+.item{display:grid;grid-template-columns:1fr 2fr 1fr;background:#eaeaea;margin-bottom:0.5rem;}
+.checkbox{height:100%;width:2.5rem;}
+.itemInfo{text-align:center;}
+
+.deleteButton{margin:0 0 0 auto;border:unset;background:#c20000;color:azure;font-size:0.8rem;width:2.5rem;height:100%;}  .deleteButton:active{margin-top:3px;}
+.purchased{background:#00885c;color:azure;}  .purchased p{text-decoration:line-through;}
+
+</style>
+<script src="./dexie.min.js"></script>
+<script>
+if('serviceWorker' in navigator){
+window.addEventListener('load',()=>{navigator.serviceWorker.register('./sw.js');});
+	}
+</script>
+</head>
+<body>
+<nav><h4>My List</h4></nav>
+<div class="container">
+<form id="itemForm">
+<label>Name of item : <input type="text" id="nameInput" required /></label><label>Quantity: <input type="number" id="quantityInput" value=1 /></label><label>Price: <input type="number" id="priceInput" value=0 /></label>
+<button type="submit" id="addItemButton">Add item</button>
+</form>
+</div>
+<div id="itemsDiv">
+</div>
+<div id="totalPriceDiv"></div>
+<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
